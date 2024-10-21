@@ -1,0 +1,12 @@
+apiVersion: v1
+kind: Service
+metadata:
+  name: poojaimg
+spec:
+  type: ClusterIP  # This keeps the service internal to the cluster (use NodePort or LoadBalancer for external access)
+  selector:
+    app: poojaimg
+  ports:
+    - protocol: TCP
+      port: 8080
+      targetPort: 8080
